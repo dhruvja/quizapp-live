@@ -162,11 +162,9 @@ def chosenAnswers(request):
             x = chosen_answers.save()
             # v = str(x)
             # print(v[16:-1])
-
-    
-
-
-    return Response(chosen_answers.data)
+            return Response(chosen_answers.data)
+    else:
+        return Response("Hey")
 
 
 @api_view(['POST'])
